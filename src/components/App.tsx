@@ -1,7 +1,7 @@
 import Header from "./Header";
 import Content from "./Content";
 import Footer from "./Footer";
-import React, {useState} from "react";
+import { useState } from "react";
 
 export default function App() {
 
