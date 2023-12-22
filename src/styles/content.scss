@@ -1,0 +1,129 @@
+.home {
+  height: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 50%;
+  opacity: 1;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+
+  &-item-container {
+    &-title {
+      font-size: 7em;
+      font-style: italic;
+      font-weight: 400;
+      margin: 0;
+
+      &-sub {
+        font-size: 2.5rem;
+        font-style: italic;
+        text-shadow: 0 0 4px white;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.container {
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  padding-left: 100px;
+
+  &-wrapper {
+    width: 100%;
+    height: auto;
+
+    &-image {
+      width: 500px;
+      border-radius: 8px;
+    }
+  }
+}
+
+@media(max-width: 1600px) {
+  .title {
+    &-item-container {
+      &-title {
+        font-size: 6em;
+      }
+    }
+  }
+}
+
+@media(max-width: 1200px) {
+  .title {
+    &-item-container {
+      &-title {
+        font-size: 5em;
+      }
+    }
+  }
+
+  .container {
+    &-wrapper {
+      &-image {
+        width: 450px;
+      }
+    }
+  }
+}
+
+@media(max-width: 992px) {
+  .home {
+    grid-template-columns: auto;
+    grid-template-rows: 15% 85%;
+  }
+
+  .title {
+    align-items: center;
+
+    &-item-container {
+      &-title {
+        font-size: 4em;
+      }
+    }
+  }
+
+  .container {
+    padding-top: 20px;
+    padding-left: 0;
+
+    &-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .title {
+    &-item-container {
+      &-title {
+        font-size: 3em;
+      }
+    }
+  }
+}
+
+@media(max-width: 576px) {
+  .home {
+    grid-template-columns: auto;
+    grid-template-rows: 25% 75%;
+    align-items: center;
+  }
+
+  .container-wrapper-image {
+    width: 300px;
+  }
+}
+
+
+
+// geiler übergang und border radius beim bild für cleaneren übergang von hintergrund zu bild
+

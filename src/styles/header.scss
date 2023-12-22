@@ -1,0 +1,132 @@
+$red: #C65038;
+$white: #ffffff;
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100px;
+
+  &-container {
+    padding: 30px;
+
+    &-logo {
+      width: 150px;
+
+      &-link {
+        cursor: pointer;
+      }
+    }
+
+    &-test {
+      width: 65%;
+      display: flex;
+      justify-content: center;
+    }
+
+    &-navigation {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 35%;
+
+      &-link {
+        font-size: 1.1rem;
+        color: $red;
+        cursor: pointer;
+        text-decoration: none;
+        transform: translateY(15px);
+      }
+    }
+  }
+
+  &-mobile-navbar {
+    display: none;
+
+    &-menu {
+      border: none;
+      background: none;
+    }
+
+    &-icon {
+      color: $white;
+    }
+  }
+}
+
+@media(max-width: 1600px) {
+  .header {
+    &-container {
+      &-navigation {
+        width: 45%;
+      }
+    }
+  }
+}
+
+@media(max-width: 1200px) {
+  .header {
+    &-container {
+      &-navigation {
+        width: 60%;
+      }
+    }
+  }
+}
+
+@media(max-width: 992px) {
+  .header {
+    &-container {
+      &-navigation {
+        width: 75%;
+      }
+    }
+  }
+}
+
+@media(max-width: 576px) {
+  .header {
+    &-container {
+      &-navigation {
+        display: none;
+      }
+
+      &-test {
+        justify-content: flex-end;
+        padding-right: 30px;
+      }
+    }
+
+    &-mobile-navbar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 25%;
+
+      &-content {
+        position: absolute;
+        margin-top: 110px;
+
+        &-list-element {
+          list-style-type: none;
+          margin: 5px 0
+        }
+      }
+    }
+  }
+
+  .header-mobile-navbar-content.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: 1s ease;
+  }
+
+  .header-mobile-navbar-content.inactive {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: 1s ease;
+  }
+}
+
